@@ -22,7 +22,7 @@ export default function ArtworkPost() {
     data.append("artimage", image);
     data.append("artist", artist);
 
-    axios.post("http://localhost:5000/arts", data)
+    axios.post(`${process.env.REACT_APP_FETCH}/arts`, data)
       .catch(err => console.log(err));
     navigate("/Dashboard/artworks");
   };
@@ -32,7 +32,7 @@ export default function ArtworkPost() {
   }
 
   const getArtists = async () => {
-    const res = await axios.get("http://localhost:5000/artists");
+    const res = await axios.get(`${process.env.REACT_APP_FETCH}/artists`);
     const resJson = await res.data;
     setArtists(resJson);
   }

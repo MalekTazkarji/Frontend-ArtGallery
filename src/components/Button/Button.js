@@ -19,7 +19,7 @@ const Button = (props, { setDataToNav }) => {
     if (props.name.trim() === "") alert("Please enter a name");
     else {
       axios
-        .get(`http://localhost:5000/artists/search/${props.name}`)
+        .get(`${process.env.REACT_APP_FETCH}/artists/search/${props.name}`)
 
         .then((response) => {
           console.log(response.data);

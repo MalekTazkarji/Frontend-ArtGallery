@@ -12,7 +12,7 @@ export default function Artist({ image, bio, description, name ,_id ,}) {
   const [arts,setArts]=useState([]);
   const [filterarts,setfilterarts]=useState([]);
  const getArts= async()=>{
-const res=await axios.get("http://localhost:5000/arts").catch((err)=>console.log(err))
+const res=await axios.get(`${process.env.REACT_APP_FETCH}/arts`).catch((err)=>console.log(err))
 const data= await res.data;
 return data;
  }
@@ -68,7 +68,7 @@ function getartsid(){
               {filterarts.map((art,index)=>{
                 return(<div key={index}>
 
-         <Link to="/artworks"> <img className="filteredimages" src={`http://localhost:5000/${art.artimage}`}alt=".."/>  </Link>
+         <Link to="/artworks"> <img className="filteredimages" src={`${process.env.REACT_APP_FETCH}/${art.artimage}`}alt=".."/>  </Link>
                   <h1 className="filteredtitle"> {art.arttitle}</h1>
                 </div>)
               })}

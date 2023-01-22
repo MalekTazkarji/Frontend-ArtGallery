@@ -6,7 +6,7 @@ export default function ArtContainer() {
   const [listOfArt, setListOfArt] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/arts").then((res) =>
+    Axios.get(`${process.env.REACT_APP_FETCH}/arts`).then((res) =>
       setListOfArt(res.data).catch((err) => console.log(err))
     );
   }, []);
@@ -22,7 +22,7 @@ export default function ArtContainer() {
             <Art
               key={art._id}
               arttitle={art.arttitle}
-              artimage={`http://localhost:5000/${art.artimage}`}
+              artimage={`${process.env.REACT_APP_FETCH}/${art.artimage}`}
               artprice={art.artprice}
               artdesc={art.artdesc}
             />

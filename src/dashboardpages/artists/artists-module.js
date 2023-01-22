@@ -8,7 +8,7 @@ import "./artistsdash.css";
 export default function Artistss(props) {
     const handleDelete = async (id) => {
         await axios
-            .delete(`http://localhost:5000/artists/${id}`)
+            .delete(`${process.env.REACT_APP_FETCH}artists/${id}`)
             .then((response) => response.data)
             .then((result) => window.location.reload())
             .catch((err) => console.log(err));
@@ -28,7 +28,7 @@ export default function Artistss(props) {
         data.append("image", image);
 
         axios
-            .put(`http://localhost:5000/artists/${id}`, data)
+            .put(`${process.env.REACT_APP_FETCH}/artists/${id}`, data)
             .catch((err) => console.log(err));
     };
 

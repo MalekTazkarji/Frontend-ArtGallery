@@ -10,7 +10,7 @@ export default function Artworks() {
   const [listOfArt, setListOfArt] = useState([]);
   const[filterart,setfilterart]=useState([])
   const sendRequest = async () => {
-    const res = await Axios.get("http://localhost:5000/arts").catch((err) =>
+    const res = await Axios.get(`${process.env.REACT_APP_FETCH}/arts`).catch((err) =>
       console.log(err)
     );
     const data = await res.data;
@@ -137,7 +137,7 @@ function getArt(letter){
             <Art
               key={art._id}
               arttitle={art.arttitle}
-              artimage={`http://localhost:5000/${art.artimage}`}
+              artimage={`${process.env.REACT_APP_FETCH}/${art.artimage}`}
               artprice={art.artprice}
               artdesc={art.artdesc}
             />

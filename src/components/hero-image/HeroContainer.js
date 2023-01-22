@@ -25,7 +25,7 @@ export default function HeroContainer() {
         return <HeroImage 
         key={index}
         _id={image._id}
-        image={`http://localhost:5000/${image.heroimg}`} />;
+        image={`${process.env.REACT_APP_FETCH}/${image.heroimg}`} />;
       })}
       </Carousel>
     </div>

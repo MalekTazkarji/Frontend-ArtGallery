@@ -16,7 +16,7 @@ export default function About({ aboutustext, visiontext, }) {
     data.append("visiontext", visiontextt);
 
     axios
-      .put(`http://localhost:5000/aboutus/`, data,{headers: {authorization: `Bearer ${localStorage.getItem('token')}`}})
+      .put(`${process.env.REACT_APP_FETCH}/`, data,{headers: {authorization: `Bearer ${localStorage.getItem('token')}`}})
       .catch((err) => console.log(err));
   };
   return (

@@ -10,7 +10,7 @@ export default function DashHeroImage() {
   const [HeroImage, setHeroImage] = useState([]);
 
   const sendRequest = async () => {
-    const res = await Axios.get("http://localhost:5000/heroAll").catch(
+    const res = await Axios.get(`${process.env.REACT_APP_FETCH}/heroAll`).catch(
       (err) => {
         console.log(err);
       }
@@ -36,7 +36,7 @@ export default function DashHeroImage() {
             <HeroImageD
               key={index}
               _id={heroimg._id}
-              image={`http://localhost:5000/${heroimg.heroimg}`}
+              image={`${process.env.REACT_APP_FETCH}/${heroimg.heroimg}`}
             />
           );
         })}

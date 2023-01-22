@@ -21,7 +21,7 @@ const navigate=useNavigate();
       data.append("description",description)
       data.append("image", image);
 
-       axios.post("http://localhost:5000/artists",data)
+       axios.post(`${process.env.REACT_APP_FETCH}`,data)
        .catch(err=>console.log(err));
        navigate("/Dashboard/artists");
   };

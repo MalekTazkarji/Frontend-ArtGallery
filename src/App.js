@@ -15,6 +15,7 @@ import DashHeroImage from "./dashboardpages/HeroImageHome/HeroImageDash";
 import HeroImagePost from "./dashboardpages/HeroImageHome/HeroImagePost";
 
 function App() {
+  console.log(`${process.env.REACT_APP_BACKEND_URL }`)
   return (
     <div className="App">
       <Router>

@@ -8,7 +8,7 @@ import SideBar from "../../components/dashboard-sidebar/sidebar";
 export default function DashArtists() {
   const [Artists, setArtists] = useState([]);
   const sendRequest = async () => {
-    const res = await Axios.get("http://localhost:5000/artists").catch(
+    const res = await Axios.get(`${process.env.REACT_APP_FETCH}/artists`).catch(
       (err) => {
         console.log(err);
       }
@@ -39,7 +39,7 @@ export default function DashArtists() {
               key={index}
               _id={artist._id}
               name={artist.name}
-              image={`http://localhost:5000/${artist.image}`}
+              image={`${process.env.REACT_APP_FETCH}/${artist.image}`}
               bio={artist.bio}
               description={artist.description}
               collection={Artists._id}

@@ -12,7 +12,7 @@ export default function HeroImagePost() {
     const data = new FormData();
     data.append("heroimg", image);
 
-    Axios.post("http://localhost:5000/hero/post", data).catch((err) =>
+    Axios.post(`${process.env.REACT_APP_FETCH}/hero/post`, data).catch((err) =>
     //   console.log(err);
       console.log("data: ", data)
     );

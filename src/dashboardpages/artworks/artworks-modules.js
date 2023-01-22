@@ -6,7 +6,7 @@ import axios from "axios"
 export default function Art({ arttitle, artimage, artprice, artdesc,_id,artistid }) {
   const handleDelete = async (id) => {
     await axios
-        .delete(`http://localhost:5000/arts/${id}`)
+        .delete(`${process.env.REACT_APP_FETCH}/arts/${id}`)
         .then((response) => response.data)
         .then((result) => window.location.reload())
         .catch((err) => console.log(err));
@@ -27,7 +27,7 @@ const handleSubmit = async (id) => {
     data.append("artimage", image);
     // data.append("artist",artist);
 
-    axios.put(`http://localhost:5000/arts/${id}`, data)
+    axios.put(`${process.env.REACT_APP_FETCH}/arts/${id}`, data)
         .catch((err) => console.log(err));
 };
 

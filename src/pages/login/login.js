@@ -11,7 +11,7 @@ const Login = () => {
 
   const login = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:5000/users/login", {
+    const res = await axios.post(`${process.env.REACT_APP_FETCH}/users/login`,{
       email: user,
       password: pass,
     });
@@ -23,7 +23,7 @@ const Login = () => {
     <>
       <h1 className="loginh1">Log In</h1>
       <div className=" container">
-        <form className="form">
+        <form className="form" onSubmit={(e)=>login(e)}>
           <div class="ccontainer">
             <label for="email">
               <b>E-mail</b>
@@ -48,7 +48,7 @@ const Login = () => {
               onChange={(e) => setPass(e.target.value)}
             />
 
-            <button className="loginbtn" type="submit" onClick={login}>
+            <button className="loginbtn" type="submit">
               Login
             </button>
           </div>

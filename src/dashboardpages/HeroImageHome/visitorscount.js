@@ -5,7 +5,7 @@ export default function VisitorsCount() {
   const [visitors, setVisitors] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/visits").then((res) =>
+    Axios.get(`${process.env.REACT_APP_FETCH}/visits`).then((res) =>
       setVisitors(res.data).catch((err) => console.log(err))
     );
   }, []);

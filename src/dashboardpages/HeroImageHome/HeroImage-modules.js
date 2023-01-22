@@ -5,7 +5,7 @@ import "./heroDash.css";
 
 export default function HeroImageD(props) {
   const handleDelete = async (id) => {
-    await Axios.delete(`http://localhost:5000/hero/delete/${id}`)
+    await Axios.delete(`${process.env.REACT_APP_FETCH}/hero/delete/${id}`)
       .then((response) => response.data)
       .then((result) => window.location.reload())
       .catch((err) => console.log(err));

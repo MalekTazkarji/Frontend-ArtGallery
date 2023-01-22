@@ -32,7 +32,7 @@ export default function AboutusPost() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/aboutus/629def19791a26a1b128a694`,
+        `${process.env.REACT_APP_FETCH}/aboutus/629def19791a26a1b128a694`,
         requestOptions
       );
       const d = await response.json();
