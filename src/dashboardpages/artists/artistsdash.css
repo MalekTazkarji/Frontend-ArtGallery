@@ -1,0 +1,145 @@
+
+.artistsContainer{
+    margin-left: 17%;
+    text-align: center;
+}
+#editt{
+    font-size: 25px;
+    background-color: white;		}
+
+#icons{
+    background-color: white;
+	border:none;
+	
+}
+
+.icn{
+    margin-left: 120px;
+}
+.img1{
+    width:100px;
+    height:100px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.eachArtist{
+    margin:50px 50px 0px 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.writeIcon{
+    border: solid 1px grey;
+    margin-top: 100px;
+    
+}
+.formm{
+    display: flex;
+    flex-direction: column;
+    width:500px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border:1px solid black;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+.editdiv{
+    width:600px;
+    background-color: beige;
+}
+.imgg{
+margin-left: 28%;
+margin-top: 10%;
+width:200px;
+height: 200px;
+border-radius: 50%;
+}
+
+.writeIcon{
+margin-bottom: 10px;
+margin-left:10px
+}
+@media screen and (max-width:1460px){
+    .eachArtist{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 150px;
+    }
+}
+@media screen and (max-width:1040px){
+    .eachArtist{
+        grid-template-columns: 1fr 1fr;
+        margin-left: 100px;
+    }
+}
+@media screen and (max-width:675px){
+    .formm{
+width:90%;
+    }
+    .editdiv{
+
+        width:500px
+    }
+    .imgg{
+      margin:0 auto;
+        width:50%;
+        height: 50%;
+        border-radius: 50%;
+        }
+
+}
+@media screen and (max-width:570px){
+    .editdiv{
+        width:350px
+    }
+   img.imgg{
+      margin:20px auto;
+   }
+
+}
+@media screen and ( max-width:430px ){
+    .editdiv{
+        width:250px
+    }
+   img.imgg{
+      margin:20px auto;
+      height: 150px;
+       width:150px;
+   }
+
+
+}
+
+@media screen and ( max-width:730px ){
+
+    .eachArtist{
+        margin:0px;
+        display:flex;
+        flex-direction: column;
+        /* align-content: center;
+        align-self: center; */
+        /* justify-content: center;
+        justify-items: center; */
+    }
+     .artistsContainer{ 
+margin-left:15%;        
+text-align: center;
+align-content: center;
+align-self: center;
+justify-content: center;
+    }
+    .imgg{
+        margin-left: 28%;
+        margin-top: 10%;
+        width:200px;
+        height: 200px;
+        border-radius: 50%;
+        }
+        .img1{
+            width:150px;
+            height:150px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }  
+      
+
+}

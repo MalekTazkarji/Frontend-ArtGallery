@@ -1,0 +1,238 @@
+.myDiv{
+  z-index:1;
+  overflow: hidden;
+}
+.filteredarts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.filteredimages{
+  width:70%;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.filteredtitle{
+  text-align: center;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom:30px;
+  color: darkgoldenrod;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+
+.img{
+width:200px;
+height: 200px;
+border:solid transparent 1px;
+border-radius: 50%;
+/* background-color: grey; */
+box-shadow: 0 0 3rem -0rem rgba(0,0,0,0.5);
+transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+.img:hover{
+  transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.page-container{
+    text-align: center;
+margin-bottom: 50px;
+    
+  }
+  /* .artistlists{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* margin-left:200px; */
+    /* margin-top: 20px;; */
+
+    /* grid-template-rows: 1fr 1fr; */
+    /* margin-top: 20px; */
+  
+  .letters{
+    margin-top: 30px;
+    display:flex;
+    justify-content: space-evenly;
+  }
+  .artistlists{
+    margin-top: 20px;
+    margin-left:200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    /* gap:30px;
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-right: 60px; */
+    /* grid-template-rows: 1 ; */
+    /* grid-template-columns: auto; */
+    /* overflow-x: scroll; */
+  }
+ .dialog{
+padding:20px 50px 50px 50px;
+}
+.text{
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.iimg{
+width:300px;
+height:300px;
+margin-left:20%;
+margin-right: 20%;
+border-radius: 50%;
+}
+.navbtn{
+  color:black;
+  background-color: orange;
+  padding:5px;
+  position: relative; 
+  margin-left: 83%;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.xbtn{
+  border: none;
+  margin-left: 500px;
+  font-size: 25px;
+  background-color: white;
+}
+.xbtn:hover{
+  color:red;
+}
+.button {
+	background-color: rgb(235, 135, 4);
+	border: 1px solid transparent;
+	width: 40px;
+	border-radius: 15px;
+}
+.button:hover{
+	background-color: rgb(224, 162, 80);
+}
+
+.button:focus{
+	background-color: rgb(250, 175, 77);
+}
+
+.bg-img-artists {
+  background-image: url('../../../images/bgyellow.jpeg');
+	background-size:cover;
+	background-repeat:no-repeat;
+  
+}
+@media screen and (max-width:1250px){
+  .artistlists{
+    margin:0;
+    margin-top: 20px;
+  }
+
+}
+@media screen and (max-width:1300px){
+  .artistlists{
+    margin-left:7%;
+  }
+
+}
+@media screen and (max-width:1024px){
+  .artistlists{
+    margin-left:5%;
+  }
+
+}
+@media screen and (max-width:920px){
+  .artistlists{
+    margin-left:3%;
+  }
+
+}
+@media screen and (max-width:920px){
+  .artistlists{
+    margin-top: 20px;
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+}
+
+
+@media screen and (max-width: 700px ){
+    *{
+      margin:0;
+      padding:0;
+    }
+    /* .artistlist{
+      display: flex;
+      flex-direction: column;
+  } */
+    .artistlists{
+     display: flex;
+     flex-direction: column;
+     margin-left: auto;
+     padding-bottom: 50px;
+    }
+    .artistlist{
+      display: flex;
+     flex-direction: column;
+     margin-left: auto;
+    }
+    .page-container{
+      align-items: center;
+ 
+    }
+    .dialog{
+      padding:0px;
+      margin:0px;
+    }
+    .navbtn{
+      bottom: 8px;
+      right:6px;
+  
+    }
+    .iimg{
+      display: block;
+      width:50%;
+      height:50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2%;
+    
+
+    }
+.page-container{
+  margin-bottom: 40px;
+}
+    .background{
+      background-repeat: repeat;
+    }
+    .letters{
+      display: flex;
+      margin: 0px;
+      padding:10px 0px 0px 3px;
+    }
+    .xbtn{
+      position: absolute;
+     right: 4%;
+     top:2%;
+      background-color:white;
+    }
+    .xbtn:hover{
+      color:red;
+    }
+    .navbtn{
+      margin-top: 1%;
+    }.button{
+      padding:0.5px;
+    }
+    /* .dialog{
+      padding:0px;
+    } */
+    
+  }
+ 

@@ -1,0 +1,65 @@
+.cont{
+    display:flex;
+    flex-direction:column;
+    width:60%;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+.bio,.description{
+    padding-top: 10px;
+    border-left: none;
+    border-right:none;
+    border-top: none;
+}
+.name{
+    padding-top: 5px;
+    border-left: none;
+    border-right:none;
+    border-top: none;
+    margin-top: 30px;
+}
+.main{
+    border:1px solid black;
+    border-radius: 20px;
+    width:50%;
+    margin:auto;
+    margin-top: 5%;
+}
+.postImg{
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top:10px;
+width:60%;
+height: 50%;
+border-radius: 20px;
+
+}
+.submitbutton{
+    background-color:rgb(140, 130, 130);
+    border-radius: 4px;
+    margin-top: 15px;
+    width:40%;
+    margin-left:50%;
+    padding:7px;
+
+}
+#fileInput{
+position: relative;
+margin-top: 20px;
+right:20%;
+}
+@media screen and (max-width:1000px){
+    .main{
+        border:1px solid black;
+        border-radius: 20px;
+        width:60%;
+        margin:auto;
+        margin-top: 10%;
+    
+    }
+}
+
+
+

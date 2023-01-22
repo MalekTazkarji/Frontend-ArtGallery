@@ -1,0 +1,50 @@
+import React from "react";
+import SideBar from "../../components/dashboard-sidebar/sidebar";
+import Axios from "axios";
+import { useEffect, useState } from "react";
+import Art from "./artworks-modules";
+
+export default function Artworks() {
+  const [listOfArt, setListOfArt] = useState([]);
+  // const [filteredsearch, setfilteredsearch] = useState("");
+  // const [searchparam] = useState(["arttitle"]);
+  const sendRequest = async () => {
+    const res = await Axios.get("http://localhost:5000/arts").catch((err) =>
+      console.log(err)
+    );
+    const data = await res.data;
+    return data;
+  };
+  useEffect(() => {
+    sendRequest().then((data) => setListOfArt(data));
+  }, []);
+  
+
+  return (
+    <>
+      <SideBar />
+      <div className="pls">
+       
+        <a href="/Dashboard/artworks/post" id="plus">Post
+          <i className="fa fa-plus-circle"></i>
+        </a>
+      </div>
+     
+      <div className="cardss">
+        {listOfArt.map((art, index) => {
+          return (
+            <Art
+              key={index}
+              _id={art._id}
+              arttitle={art.arttitle}
+              artimage={`http://localhost:5000/${art.artimage}`}
+              artprice={art.artprice}
+              artdesc={art.artdesc}
+              // artistid={art.artist._id}
+            />
+          );
+        })}
+      </div>
+    </>
+  );
+}

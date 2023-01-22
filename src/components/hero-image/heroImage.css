@@ -1,0 +1,36 @@
+
+
+.hero-carousel {
+width:inherit;
+height: 550px;
+margin:auto;
+/* transform: scale(0.5); */
+/* display: flex;
+flex-direction: row;
+justify-content: center;
+box-shadow: 2cm; */
+
+    
+}
+
+.bg-img {
+    background-image: url('../../../images/bgyellow.jpeg');
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+
+@media screen and (max-width: 950px) {
+.hero-carousel{
+    width: auto;
+    height: 400px;
+    z-index: 0;
+}    
+}
+@media screen and (max-width: 600px) {
+    .hero-carousel{
+        width: auto;
+        height: 300px;
+        z-index: 0;
+    }    
+    }

@@ -1,0 +1,55 @@
+.footer {
+  display: inline-block;
+  border-top: 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  color: transparent;
+  background: linear-gradient(316deg, #ffc857 0%, black 74%);
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+}
+
+.social-icons {
+  display: flex;
+  list-style-type: none;
+  text-decoration: solid;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  position: relative;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.insta {
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #5b440b;
+  
+}
+.fb {
+  color: #5b440b;
+}
+.twitgit {
+  color: #5b440b;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: -10px;
+    transform: translate(-100, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    justify-content: space-evenly;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+  }
+ 
+}

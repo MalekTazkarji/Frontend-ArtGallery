@@ -1,0 +1,100 @@
+.thetext::after {
+  font-family: cursive;
+  font-size: 4.5rem;
+  color: black;
+  place-items: center;
+  place-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  position: center;
+  background: url("../../Imgs/sf1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -2;
+  background-position: center;
+  opacity: 0.25;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 250px;
+}
+.dashcontainer {
+  display: flex;
+  height: 100%;
+  overflow-y: hidden;
+}
+.container {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+}
+.abouttext {
+  margin-top: 10px;
+  margin-left: 25%;
+  border-radius: 15px;
+  box-sizing: content-box;
+  resize: none;
+  width: 100%;
+  padding: 50px;
+  width: 40%;
+  height: 30%;
+  opacity: 0.8;
+}
+.vision {
+  margin-top: 10px;
+  margin-left: 25%;
+  border-radius: 15px;
+  box-sizing: content-box;
+  resize: none;
+  width: 100%;
+  padding: 50px;
+  width: 40%;
+  height: 30%;
+  opacity: 0.8;
+}
+.abt-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 32px;
+  text-align: center;
+  background-color: transparent;
+  font-size: 18px;
+}
+.abt-btn:hover {
+  background-color: rgb(255, 214, 160) !important;
+  border: solid;
+  text-decoration: solid;
+  font-size: 18px;
+}
+@media screen and (max-width: 540px) {
+  .img1 {
+    margin-top: 40%;
+    align-items: center;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  .abt-btn {
+    opacity: 0.8;
+    margin-top: 6%;
+    margin-left: 80%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .vision,.abouttext{
+    height: 25%;
+  }
+}
+

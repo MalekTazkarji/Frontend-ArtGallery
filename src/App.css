@@ -1,0 +1,61 @@
+html {
+  min-height: 100%;
+  width: 100vw;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 201, 40) 0%,
+    rgb(242, 190, 88) 100%
+  );
+  border-top: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: rgb(235, 135, 4);
+  font-size: 25px;
+}
+
+.social-icons {
+  display: flex;
+  list-style-type: none;
+  text-decoration: solid;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  position: relative;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.insta {
+  padding: 0 100px;
+  color: black;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: -10px;
+    transform: translate(-100, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    justify-content: space-evenly;
+  }
+
+.social-icons {
+  display: flex;
+  justify-content:center;
+  padding: 0%;
+}
+.insta{
+  padding: 20px;
+}
+}

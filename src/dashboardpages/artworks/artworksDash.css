@@ -1,0 +1,151 @@
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+#plus{
+	color:black;
+position: absolute;
+right:2%;
+top: 2%;
+font-size: 40px;
+	display: flex;
+	text-decoration: none;
+	/* border-radius: 60%;
+	border: 2px solid black; */
+}
+.pls{
+	margin-top: 20px;
+	margin-bottom: 2%;
+
+}
+.cardss{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-left: 15%;
+	justify-items: center;
+}
+#editt{
+font-size: 25px;
+background-color: white;		}
+#icons{
+	background-color: white;
+	border:none;
+	
+}
+.divicon{
+	margin-left: 60%;
+}
+
+.carde {
+	display: flex;
+    flex-direction: column;
+	width: 90%;
+    max-width: 18rem; 
+	font-size: 1rem;
+	border:1px transparent solid;
+	border-radius: 30px;
+	text-decoration: none;
+	overflow: hidden;
+	margin-top: 30px;
+	/* height: 470px; */
+	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.carde:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+.card-titlee{
+	padding:5px;
+}
+.carde-imagee {
+	display: block;
+	min-height:60%;
+	background: #fff center center no-repeat;
+	background-size: cover;
+	/* filter: blur(3px);  */
+}
+.carde-imagee > img {
+	display: block;
+	width: 100%;
+	height: 300px;
+	opacity: 100; /* visually hide the img element */
+}
+@media screen and ( max-width: 1200px ) {
+.cardss{
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 30px;
+}
+}
+@media screen and ( max-width: 1000px ) {
+	.cardss{
+		grid-template-columns: 1fr 1fr;
+	}
+	}
+
+@media screen and ( max-width: 600px ) {
+	.cardss{
+		display:grid;
+		grid-template-columns: 1fr;
+		margin-left: 60px;
+		
+	}
+	
+	.carde {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		max-width: 18rem; 
+		font-size: 1rem;
+		border:1px transparent solid;
+		border-radius: 15px;
+		text-decoration: none;
+		overflow: hidden;
+		margin-top: 30px;
+		/* height: 470px; */
+		box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+		transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+	}
+	.carde-imagee > img {
+		display: block;
+		width: 100%;
+		height: 200px;
+		opacity: 100; /* visually hide the img element */
+	}
+	.carde-imagee {
+		display: block;
+		min-height: 11rem;
+		background: #fff center center no-repeat;
+		background-size: cover;
+		/* filter: blur(3px);  */
+	}
+	#editt{
+margin-right: 10px;
+	}
+	#icons{
+		background-color: white;
+		border:none;
+	}
+	.divicon{
+	
+		margin-left: 150px;
+	}
+	#plus{
+		color:black;
+		margin-left: 300px;
+		font-size: 30px;
+		/* border-radius: 50%;
+		border: 2px solid black; */
+		/* background-color: white; */
+	}
+	
+	
+}
+
+
+
