@@ -2,14 +2,24 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import Artist from "./artistmodule";
 import "./artist.css";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/footer";
+import axios from "axios";
+
 export default function Artists() {
   const [listOfArtists, setListOfArtists] = useState([]);
   const [filterArtists, setfilterArtists] = useState([]);
-
+  const [arts, setArts] = useState([]);
+  const getArts = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_FETCH}/arts`);
+      const data = await res.data;
+      console.log(data);
+      setArts(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   const sendRequest = async () => {
-    const res = await Axios.get("http://localhost:5000/artists").catch((err) =>
+    const res = await Axios.get(`${process.env.REACT_APP_FETCH}/artists`).catch((err) =>
       console.log(err)
     );
     const data = await res.data;
@@ -17,11 +27,12 @@ export default function Artists() {
   };
 
   useEffect(() => {
+    getArts();
     sendRequest().then((data) => setListOfArtists(data));
   }, []);
 
   function getartist(letter) {
-    const byName = listOfArtists.filter((artist) =>
+    const byName = listOfArtists?.filter((artist) =>
       artist.name.toUpperCase().startsWith(letter)
     );
     console.log(byName);
@@ -32,8 +43,6 @@ export default function Artists() {
   return (
     <div className="myDiv">
       <div className="bg-img-artists">
-      <Navbar />
-     
         <div className="letters">
           <button className="button" onClick={(e) => getartist("A")}>
             A
@@ -115,13 +124,14 @@ export default function Artists() {
           </button>
         </div>
         <div className="artistlists">
-          {filterArtists.map((artist,index) => {
+          {filterArtists?.map((artist,index) => {
             return (
               <Artist
+              arts={arts}
               key={index}
               _id={artist._id}
                 name={artist.name}
-                image={`http://localhost:5000/${artist.image}`}
+                image={`${process.env.REACT_APP_FETCH}/${artist.image}`}
                 bio={artist.bio}
                 description={artist.description}
               />
@@ -133,10 +143,11 @@ export default function Artists() {
           {listOfArtists.map((artist,index) => {
             return (
               <Artist
+              arts={arts}
                 key={index}
                 _id={artist._id}
                 name={artist.name}
-                image={`http://localhost:5000/${artist.image}`}
+                image={`${process.env.REACT_APP_FETCH}/${artist.image}`}
                 bio={artist.bio}
                 description={artist.description}
               />
@@ -144,7 +155,6 @@ export default function Artists() {
           })}
         </div>
     
-      <Footer />
       </div>
      
       </div>  );

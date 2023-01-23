@@ -1,18 +1,60 @@
 .NavbarItems {
-  /* position: fixed; */
-  /* background-color: #ffc857; */
-/* background-image: linear-gradient(316deg, #ffc857 0%, black 74%); */
-background-color: transparent;
-
-  /* color: beige; */
+  background-color: transparent;
   text-decoration: unset;
-  height: 110px;
+  height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   position: relative;
 }
+.active-link::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  /* transition:0.5s; */
+}
+
+.navigation-menu ul li .not-active::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+ ul li {
+  list-style: none;
+  /* display: inline-block; */
+  margin: 0 20px;
+  position: relative;
+}
+ ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+ ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+ ul li:hover::after {
+  width: 100%;
+}
+
 .navbar-logo {
   color: rgb(235, 135, 4);
   justify-content: start;
@@ -26,6 +68,7 @@ background-color: transparent;
   font-size: 1.6rem;
   
 }
+
 .nav-menu,
 .nav-menu-active {
   display: grid;
@@ -37,6 +80,7 @@ background-color: transparent;
   margin-right: 2rem;
   
 }
+
 .nav-links {
   color: aliceblue;
   text-decoration: none;

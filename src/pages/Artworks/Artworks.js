@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/footer";
 import Axios from "axios";
 import { useEffect, useState } from "react";
 import Art from "../Artworks/artworksModule";
@@ -21,7 +19,7 @@ export default function Artworks() {
     sendRequest().then((data) => setListOfArt(data));
   }, []);
 function getArt(letter){
-  const getbytitle=listOfArt.filter((art)=>
+  const getbytitle=listOfArt?.filter((art)=>
     art.arttitle.toUpperCase().startsWith(letter)
   )
   setfilterart(getbytitle);
@@ -35,9 +33,7 @@ function getArt(letter){
     <>
     <div className="overfloww">
     <div className="background"> </div>
-    <div className="bg-img-artworks">
-    <Navbar/>
-    
+    <div className="bg-img-artworks">    
     <div className="letters">
           <button className="button" onClick={(e) => getArt("A")}>
             A
@@ -119,7 +115,7 @@ function getArt(letter){
           </button>
         </div>
     <div className="cardzz">
-        {filterart.map((art) => {
+        {filterart?.map((art) => {
           return (
             <Art
               key={art._id}
@@ -145,7 +141,6 @@ function getArt(letter){
         })}
       </div>
     
-      <Footer/>
       </div>
       </div>
     </>

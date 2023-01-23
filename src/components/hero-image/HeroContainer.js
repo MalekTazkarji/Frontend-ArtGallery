@@ -9,7 +9,7 @@ export default function HeroContainer() {
   const [heroImage, setHeroImage] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/heroAll").then((res) =>
+    Axios.get(`${process.env.REACT_APP_FETCH}/heroAll`).then((res) =>
       setHeroImage(res.data).catch((err) => console.log(err))
     );
   }, []);

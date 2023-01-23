@@ -1,26 +1,11 @@
 
 import React, { useState } from "react";
-import { MenuItems } from "./MenuItems";
-import Button from "./Button";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
-  const [name, setName] = useState("");
-  // const [data, setData] = useState([]);
-
-
-// const pull_data_button = (json)=> {
-//   console.log("from button: " , pull_data_button)
-// }
-
-
-// const btn_data = (data_btn) => {
-//   console.log("data_btn: ", data_btn)
-// };
-  
-
 
 const handleClick = () => {
     setClicked(!clicked);
@@ -36,15 +21,64 @@ const handleClick = () => {
         </div>
       </div>
       <ul className={clicked ? "nav-menu-active" : "nav-menu"}>
-        {MenuItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <a className={item.cName} href={item.url}>
-                {item.title}
-              </a>
+            <li>
+            <NavLink
+              to={"/"} 
+              exact="true"
+
+              className={({ isActive }) =>
+                isActive ? "active-link" : "not-active"
+              }
+              end
+            >
+              <a>  Home</a>
+            </NavLink>
             </li>
-          );
-        })}
+            <li>
+            <NavLink
+              to={"/artists"} 
+              exact="true"
+
+              className={({ isActive }) =>
+                isActive ? "active-link" : "not-active"
+              }
+              end
+            >
+              <a>
+              Artists
+              </a>
+            </NavLink>
+            </li>
+            <li>
+            <NavLink
+              to={"/artworks"} 
+              exact="true"
+
+              className={({ isActive }) =>
+                isActive ? "active-link" : "not-active"
+              }
+              end
+            >
+              <a>
+              Artworks
+              </a>
+            </NavLink>
+            </li>
+            <li>
+            <NavLink
+              to={"/aboutus"} 
+              exact="true"
+
+              className={({ isActive }) =>
+                isActive ? "active-link" : "not-active"
+              }
+              end
+            >
+              <a>
+              Aboutus
+              </a>
+            </NavLink>
+            </li>
       </ul>
 
 

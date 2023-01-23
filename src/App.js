@@ -13,12 +13,14 @@ import ArtworkPost from "./dashboardpages/artworks/artworkspost";
 import Artworks from "./pages/Artworks/Artworks";
 import DashHeroImage from "./dashboardpages/HeroImageHome/HeroImageDash";
 import HeroImagePost from "./dashboardpages/HeroImageHome/HeroImagePost";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/footer";
 
 function App() {
-  console.log(`${process.env.REACT_APP_BACKEND_URL }`)
   return (
     <div className="App">
       <Router>
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
@@ -33,6 +35,7 @@ function App() {
           <Route path="/Dashboard/aboutus" element={<DashAbout />} />
           <Route path="Dashboard/home/hero/post" element={<HeroImagePost />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
