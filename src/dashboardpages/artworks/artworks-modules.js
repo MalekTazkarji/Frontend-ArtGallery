@@ -49,7 +49,7 @@ const handleSubmit = async (id) => {
                             onClick={() => {
                                 setEdit(!edit);
                             }}
-                        >
+                        >edit
                             <i id="editt" className="singlePostIcon far fa-edit"></i>{" "}
                         </button>
                         <button  id="icons"

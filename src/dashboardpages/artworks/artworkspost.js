@@ -34,7 +34,7 @@ export default function ArtworkPost() {
   const getArtists = async () => {
     const res = await axios.get(`${process.env.REACT_APP_FETCH}/artists`);
     const resJson = await res.data;
-    setArtists(resJson);
+    setArtists(resJson.data);
   }
 
   useEffect(() => {

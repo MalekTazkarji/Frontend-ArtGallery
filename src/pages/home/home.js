@@ -7,7 +7,7 @@ const home = () => {
   return (<>
   <div className="bg-img">
     <div>
-      <div className="hero-carousel">
+      <div className="hero-carousel" style={{backgroundColor:"rgb(225, 228, 232)"}}>
         <HeroImage />
       </div>
       <body style={{backgroundColor:"rgb(225, 228, 232)"}}>

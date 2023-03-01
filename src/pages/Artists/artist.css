@@ -1,6 +1,7 @@
 .myDiv{
   z-index:1;
   overflow: hidden;
+  min-height: 100vh;
 }
 .filteredarts{
   display: flex;
@@ -123,7 +124,6 @@ border-radius: 50%;
 }
 
 .bg-img-artists {
-  background-image: url('../../../images/bgyellow.jpeg');
 	background-size:cover;
 	background-repeat:no-repeat;
   

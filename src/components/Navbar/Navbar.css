@@ -7,7 +7,10 @@
   align-items: center;
   font-size: 1.2rem;
   position: relative;
+  background-color: rgb(233, 237, 241);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
 .active-link::after {
   content: "";
   height: 3px;

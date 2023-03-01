@@ -13,10 +13,10 @@ export default function Artworks() {
       console.log(err)
     );
     const data = await res.data;
-    return data;
+    setListOfArt(data.data);
   };
   useEffect(() => {
-    sendRequest().then((data) => setListOfArt(data));
+    sendRequest();
   }, []);
   
 

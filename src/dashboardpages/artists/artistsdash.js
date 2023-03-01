@@ -18,7 +18,7 @@ export default function DashArtists() {
   };
 
   useEffect(() => {
-    sendRequest().then((data) => setArtists(data));
+    sendRequest().then((data) => setArtists(data.data));
   }, []);
 
 

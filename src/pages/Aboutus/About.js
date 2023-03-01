@@ -10,7 +10,7 @@ export default function DashAbout() {
     try{
     const res = await axios.get(`${process.env.REACT_APP_FETCH}/aboutus`);
     const data = await res.data;
-    setAbout(data);
+    setAbout(data.data);
     }catch(err){
       console.log(err)
     }

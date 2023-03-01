@@ -7,13 +7,19 @@ import  "./heroImage.css"
 
 export default function HeroContainer() {
   const [heroImage, setHeroImage] = useState([]);
-
+  
+  const Request = async () => {
+    try{
+    const response = await Axios.get(`${process.env.REACT_APP_FETCH}/heroAll`);
+    const res = await response.data;
+    setHeroImage(res.data);
+    }catch(err){
+      console.log(err);
+    }
+   }
   useEffect(() => {
-    Axios.get(`${process.env.REACT_APP_FETCH}/heroAll`).then((res) =>
-      setHeroImage(res.data).catch((err) => console.log(err))
-    );
+    Request()
   }, []);
- 
   return (
     <div>
       <Carousel
@@ -21,7 +27,7 @@ export default function HeroContainer() {
        interval="3000" 
        transitionTime="1000" 
        className="hero-carousel">
-      {heroImage.map((image,index) => {
+      {heroImage?.map((image,index) => {
         return <HeroImage 
         key={index}
         _id={image._id}

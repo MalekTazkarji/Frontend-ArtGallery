@@ -28,12 +28,11 @@ export default function ArtContainer() {
   try{
   const res =await Axios.get(`${process.env.REACT_APP_FETCH}/arts`)
   const response =await res.data;
-  setListOfArt(response.slice(0,6));
+  setListOfArt(response?.data?.slice(0,6));
   }catch(err){
     console.log(err);
   }
  }
-
   useEffect(() => {
   GetArts();
   }, []);
@@ -65,16 +64,17 @@ export default function ArtContainer() {
     </Box> */}
     <Typography
     align="center"
-    color="GrayText"
+    color="black"
      gutterBottom 
      variant="h5" 
      component="div"
-     sx={{margin:"20px",
+     sx={{margin:"30px auto",
+     width:"fit-content",
+     borderBottom:"3px solid black"
      }}>
       Latest Arts
     </Typography>  
-    <Grid margin={1}  container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-           
+    <Grid sx={{margin:"60px 50px "}}  container rowSpacing={6} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
      {listOfArt?.map((art, index) => (
         <Grid item xs={4} md={4} sx={{backgroundColor:"rgb(225, 228, 232)"}}>
                  

@@ -20,7 +20,7 @@ export default function DashHeroImage() {
   };
 
   useEffect(() => {
-    sendRequest().then((data) => setHeroImage(data));
+    sendRequest().then((data) => setHeroImage(data.data));
   }, []);
 
   return (
